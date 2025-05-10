@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موقع سكربتات روبلوكس</title>
   <style>
-    /* إعادة تصميم الألوان والخلفيات */
+    /* زيادة السواد في الخلفية */
     body {
       font-family: Arial, sans-serif;
-      background-color: #0d1117; /* مثل خلفية GitHub */
+      background-color: #0a0d12; /* زيادة السواد أكثر */
       color: #c9d1d9;
       margin: 0;
       padding: 0;
@@ -20,7 +20,7 @@
     /* رأس الصفحة */
     header {
       width: 100%;
-      background-color: #161b22;
+      background-color: #121417; /* خلفية أغمق قليلاً */
       padding: 15px;
       text-align: center;
     }
@@ -28,6 +28,7 @@
     h1 {
       font-size: 1.8rem;
       margin: 0;
+      color: #f0f0f0;
     }
 
     .search-bar {
@@ -60,12 +61,14 @@
       margin: 10px 0;
       padding: 20px;
       border-radius: 5px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3); /* إضافة تأثير إضاءة خفيف للون الأزرق */
     }
 
     .script-box h2 {
       color: #58a6ff;
       font-size: 1.4rem;
       margin-bottom: 10px;
+      text-shadow: 0 0 5px #58a6ff; /* تأثير ضوء خفيف على الأزرق */
     }
 
     .script-box p {
@@ -85,7 +88,7 @@
 
     /* Footer */
     footer {
-      background-color: #161b22;
+      background-color: #121417;
       padding: 20px;
       width: 100%;
       text-align: center;
