@@ -86,6 +86,15 @@
         </textarea>
     </div>
 
+    <!-- خانة مصطفى جلال | Mustafa Jalal -->
+    <div class="script-box" id="mustafa-jalal">
+        <div class="premium-text">مصطفى جلال | Mustafa Jalal</div>
+        <h2>سكربت خاص</h2>
+        <textarea readonly>
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
+        </textarea>
+    </div>
+
     <!-- خانة Other Scripts -->
     <div class="script-box" id="other-scripts">
         <div class="premium-text">جميع المابات</div>
@@ -93,7 +102,7 @@
         <textarea readonly>
             loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
         </textarea>
-        
+
         <div class="premium-text">جميع المابات</div>
         <h2>طيران | fly 🕊️</h2>
         <textarea readonly>
