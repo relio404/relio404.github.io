@@ -104,22 +104,22 @@
     <script>
         // دالة البحث لتصفية السكربتات
         function searchScripts() {
-            var input, filter, boxes, h2, i, txtValue;
+            var input, filter, boxes, text, i;
             input = document.getElementById("searchBox");
             filter = input.value.toUpperCase();
             boxes = document.getElementsByClassName("script-box");
 
             // تصفية كل خانة من السكربتات
             for (i = 0; i < boxes.length; i++) {
-                h2 = boxes[i].getElementsByTagName("h2")[0];
-                if (h2) {
-                    txtValue = h2.textContent || h2.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        boxes[i].classList.remove("hidden");
-                    } else {
-                        boxes[i].classList.add("hidden");
-                    }
-                }       
+                // جمع النصوص التي ستؤخذ في الحسبان أثناء البحث
+                text = boxes[i].innerText || boxes[i].textContent;
+
+                // إذا كانت النصوص تتضمن النص المدخل، نقوم بعرضها، وإذا لا نقوم بإخفائها
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    boxes[i].classList.remove("hidden");
+                } else {
+                    boxes[i].classList.add("hidden");
+                }
             }
         }
     </script>
