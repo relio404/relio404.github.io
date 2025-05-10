@@ -44,47 +44,6 @@
       border-radius: 5px;
     }
 
-    /* نمط السكربتات */
-    .scripts-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding: 20px 0;
-    }
-
-    .script-box {
-      background-color: #161b22;
-      border: 1px solid #444;
-      width: 90%;
-      margin: 10px 0;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
-    }
-
-    .script-box h2 {
-      color: #58a6ff;
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-      text-shadow: 0 0 5px #58a6ff;
-    }
-
-    .script-box p {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    .script-box a {
-      color: #58a6ff;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .script-box a:hover {
-      text-decoration: underline;
-    }
-
     /* النمط الخاص للقوائم القابلة للفتح */
     .expandable {
       cursor: pointer;
@@ -104,6 +63,46 @@
       padding: 10px;
       color: #fff;
       font-size: 0.9rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+    }
+
+    .expandable-content pre {
+      background-color: #0a0d12;
+      color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+    }
+
+    /* مربع النص - بنفس حجم شاشة الجوال */
+    .script-box {
+      background-color: #161b22;
+      border: 1px solid #444;
+      width: 90%;
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+    }
+
+    .script-box pre {
+      background-color: #0a0d12;
+      color: #fff;
+      padding: 15px;
+      font-size: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+    }
+
+    /* النمط الخاص بالمربع مع اللون الأزرق الخفيف */
+    .script-box {
+      background-color: #121417;
+      color: #fff;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
     }
 
     /* التصميم المتجاوب للجوال */
@@ -116,12 +115,13 @@
         width: 90%;
       }
 
-      .script-box h2 {
-        font-size: 1.2rem;
+      .expandable-content pre {
+        font-size: 0.8rem;
       }
 
-      .script-box p {
-        font-size: 0.9rem;
+      .expandable {
+        width: 90%;
+        padding: 10px;
       }
     }
 
@@ -155,8 +155,9 @@
       Emergency Hamburger
     </div>
     <div id="emergencyHamburgerContent" class="expandable-content">
-      <p style="font-size: 0.8rem; color: #fff;">Loadstring(لتنفيذ السكربت)</p>
-      <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()</pre>
+      <div class="script-box">
+        <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()</pre>
+      </div>
     </div>
 
     <!-- Other Scripts Section -->
@@ -164,8 +165,9 @@
       Other Scripts
     </div>
     <div id="otherScriptsContent" class="expandable-content">
-      <p style="font-size: 0.8rem; color: #fff;">Loadstring(لتنفيذ السكربت)</p>
-      <pre>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</pre>
+      <div class="script-box">
+        <pre>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</pre>
+      </div>
     </div>
 
   </div>
