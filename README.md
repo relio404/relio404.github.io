@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سكربتات Roblox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #181818;
@@ -47,9 +48,27 @@
             resize: none;
             font-family: monospace;
         }
-        
+
         .hidden {
             display: none;
+        }
+
+        .premium-text {
+            font-family: 'Roboto Slab', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -60,6 +79,7 @@
 
     <!-- خانة Emergency hambuurg -->
     <div class="script-box" id="emergency-hambuurg">
+        <div class="premium-text">Emergency hambuurg</div>
         <h2>باتمان | batman 🦇</h2>
         <textarea readonly>
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
@@ -68,11 +88,13 @@
 
     <!-- خانة Other Scripts -->
     <div class="script-box" id="other-scripts">
+        <div class="premium-text">جميع المابات</div>
         <h2>الشبح | Ghost 👻</h2>
         <textarea readonly>
             loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
         </textarea>
         
+        <div class="premium-text">جميع المابات</div>
         <h2>طيران | fly 🕊️</h2>
         <textarea readonly>
             loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
