@@ -1,115 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Scripts</title>
+    <title>سكربتات Roblox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
+            background-color: #181818;
+            color: white;
             font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
-        header {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        .container {
-            margin: 20px;
-        }
-        .script-box {
-            background-color: #222;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-        h1 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            font-size: 20px;
-        }
-        button {
-            padding: 10px;
-            background-color: #444;
-            border: none;
-            color: white;
-            cursor: pointer;
+
+        #searchBox {
             width: 100%;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #666;
-        }
-        .search-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        input[type="text"] {
             padding: 10px;
-            width: 50%;
+            margin-bottom: 20px;
+            background-color: #333;
+            color: white;
+            border: 2px solid #444;
+            border-radius: 8px;
             font-size: 16px;
-            margin-right: 10px;
+        }
+
+        .script-box {
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #222;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            background-color: #333;
+            color: #fff;
             border: none;
-            border-radius: 5px;
+            padding: 10px;
+            resize: none;
+            font-family: monospace;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .premium-text {
+            font-family: 'Roboto Slab', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 10px;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>My Roblox Scripts</h1>
-    </header>
 
-    <div class="search-container">
-        <input type="text" id="search" placeholder="Search for scripts..." onkeyup="searchScripts()">
+    <!-- شريط البحث -->
+    <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
+
+    <!-- خانة Emergency hambuurg -->
+    <div class="script-box" id="emergency-hambuurg">
+        <div class="premium-text">Emergency hambuurg</div>
+        <h2>باتمان | batman 🦇</h2>
+        <textarea readonly>
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
+        </textarea>
     </div>
 
-    <div class="container" id="scripts-container">
-        <!-- Emergency Hambuurg Script -->
-        <div class="script-box">
-            <h2>Emergency Hambuurg</h2>
-            <p>Batman 🦇</p>
-            <button onclick="runScript('https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe')">Run Script</button>
-        </div>
-
-        <!-- Other Scripts Section -->
-        <div class="script-box">
-            <h2>Other Scripts</h2>
-            <p>Ghost 👻</p>
-            <button onclick="runScript('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub')">Run Script</button>
-        </div>
-        <div class="script-box">
-            <p>Fly 🕊️</p>
-            <button onclick="runScript('https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt')">Run Script</button>
-        </div>
+    <!-- خانة Other Scripts -->
+    <div class="script-box" id="other-scripts">
+        <div class="premium-text">جميع المابات</div>
+        <h2>الشبح | Ghost 👻</h2>
+        <textarea readonly>
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+        </textarea>
+        
+        <div class="premium-text">جميع المابات</div>
+        <h2>طيران | fly 🕊️</h2>
+        <textarea readonly>
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+        </textarea>
     </div>
 
     <script>
-        function runScript(url) {
-            var script = document.createElement('script');
-            script.src = url;
-            document.body.appendChild(script);
-        }
-
+        // دالة البحث لتصفية السكربتات
         function searchScripts() {
-            let searchQuery = document.getElementById("search").value.toLowerCase();
-            let scripts = document.querySelectorAll('.container .script-box');
-            scripts.forEach(script => {
-                let title = script.querySelector('p').textContent.toLowerCase();
-                if (title.includes(searchQuery)) {
-                    script.style.display = "block";
+            var input, filter, boxes, text, i;
+            input = document.getElementById("searchBox");
+            filter = input.value.toUpperCase();
+            boxes = document.getElementsByClassName("script-box");
+
+            // تصفية كل خانة من السكربتات
+            for (i = 0; i < boxes.length; i++) {
+                // جمع النصوص التي ستؤخذ في الحسبان أثناء البحث
+                text = boxes[i].innerText || boxes[i].textContent;
+
+                // إذا كانت النصوص تتضمن النص المدخل، نقوم بعرضها، وإذا لا نقوم بإخفائها
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    boxes[i].classList.remove("hidden");
                 } else {
-                    script.style.display = "none";
+                    boxes[i].classList.add("hidden");
                 }
-            });
+            }
         }
     </script>
-</body>
 
+</body>
 </html>
