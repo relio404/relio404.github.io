@@ -71,14 +71,16 @@
     </div>
 
     <div class="container" id="scripts-container">
-        <h2>Emergency Hambuurg</h2>
+        <!-- Emergency Hambuurg Script -->
         <div class="script-box">
+            <h2>Emergency Hambuurg</h2>
             <p>Batman 🦇</p>
             <button onclick="runScript('https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe')">Run Script</button>
         </div>
-        
-        <h2>Other Scripts</h2>
+
+        <!-- Other Scripts Section -->
         <div class="script-box">
+            <h2>Other Scripts</h2>
             <p>Ghost 👻</p>
             <button onclick="runScript('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub')">Run Script</button>
         </div>
