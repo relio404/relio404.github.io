@@ -5,33 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موقع سكربتات روبلوكس</title>
   <style>
+    /* إعادة تصميم الألوان الخلفية والنصوص */
     body {
       font-family: Arial, sans-serif;
-      background-color: #1a1a1a;
-      color: #f5f5f5;
+      background-color: #1e1e1e;
+      color: #fff;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #333;
+      background-color: #000;
       padding: 20px;
       text-align: center;
     }
 
     h1 {
-      color: #ffcc00;
-      font-size: 3rem;
+      color: #f0f0f0;
+      font-size: 2.5rem;
     }
 
     nav {
-      background-color: #222;
+      background-color: #333;
       padding: 10px;
       text-align: center;
     }
 
     nav a {
-      color: #f5f5f5;
+      color: #fff;
       padding: 10px 20px;
       text-decoration: none;
       font-size: 1.2rem;
@@ -40,9 +41,10 @@
     }
 
     nav a:hover {
-      background-color: #444;
+      background-color: #555;
     }
 
+    /* تصميم المحتوى الرئيسي */
     .container {
       max-width: 1200px;
       margin: 30px auto;
@@ -50,8 +52,8 @@
     }
 
     .script-box {
-      background-color: #333;
-      border: 1px solid #ffcc00;
+      background-color: #000;
+      border: 2px solid #ffcc00;
       padding: 20px;
       margin-bottom: 30px;
       border-radius: 5px;
@@ -59,22 +61,16 @@
 
     .script-box h2 {
       color: #ffcc00;
-      font-size: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
     }
 
-    .script-box pre {
-      background-color: #222;
-      padding: 10px;
-      border-radius: 5px;
-      color: #f5f5f5;
-      font-family: monospace;
-      font-size: 1rem;
-      white-space: pre-wrap;
-      word-wrap: break-word;
+    .script-box p {
+      font-size: 1.2rem;
     }
 
     footer {
-      background-color: #333;
+      background-color: #000;
       padding: 20px;
       text-align: center;
       color: #f5f5f5;
@@ -88,6 +84,22 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* التصميم المتجاوب مع الجوال */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .script-box h2 {
+        font-size: 1.5rem;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -108,32 +120,13 @@
 
   <!-- Main Content -->
   <div class="container">
+    <!-- Script Box for "Emergency Hamburger" -->
     <div class="script-box">
-      <h2>سكربت Emergency Hamburger</h2>
-      <p>هذا سكربت لإضافة خاصية الهامبرغر الطوارئ في روبلوكس.</p>
-      <pre>
--- سكربت Emergency Hamburger
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local EmergencyHamburger = Instance.new("Model")
-EmergencyHamburger.Name = "EmergencyHamburger"
-EmergencyHamburger.Parent = ReplicatedStorage
-
-local function createHamburger()
-    local hamburger = Instance.new("Part")
-    hamburger.Size = Vector3.new(4, 0.5, 4)
-    hamburger.Position = Vector3.new(0, 5, 0)
-    hamburger.Color = Color3.fromRGB(255, 128, 0)
-    hamburger.Anchored = true
-    hamburger.Parent = EmergencyHamburger
-end
-
-createHamburger()
-print("سكربت هامبرغر الطوارئ جاهز!")
-      </pre>
+      <h2>Script Emergency Hamburger</h2>
+      <p>هنا يمكنك إضافة السكربت الخاص بـ "Emergency Hamburger" أو أي تعليمات لسكربت آخر.</p>
     </div>
 
-    <!-- Add more script boxes here -->
-
+    <!-- يمكن إضافة المزيد من السكربتات هنا إذا أردت -->
   </div>
 
   <!-- Footer Section -->
@@ -141,7 +134,5 @@ print("سكربت هامبرغر الطوارئ جاهز!")
     <p>© 2025 جميع الحقوق محفوظة. <a href="#">الشروط والأحكام</a></p>
   </footer>
 
-</body>
-</html>
 </body>
 </html>
