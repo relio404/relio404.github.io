@@ -1,194 +1,170 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقع سكربتات روبلوكس</title>
+  <title>Mustafa Jalal | مصطفى جلال - Roblox Scripts</title>
   <style>
     body {
+      background-color: #181818;
+      color: white;
       font-family: Arial, sans-serif;
-      background-color: #0a0d12;
-      color: #c9d1d9;
       margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
-
-    header {
-      width: 100%;
-      background-color: #121417;
+    .navbar {
+      background-color: #181818;
       padding: 15px;
       text-align: center;
     }
-
-    h1 {
-      font-size: 1.8rem;
-      margin: 0;
-      color: #f0f0f0;
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin: 0 15px;
     }
-
     .search-bar {
-      margin-top: 10px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
     }
-
     .search-bar input {
-      padding: 8px;
-      font-size: 1rem;
-      width: 80%;
-      border: 1px solid #444;
-      background-color: #1c1f26;
-      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border: none;
       border-radius: 5px;
+      margin-right: 10px;
     }
-
-    .expandable {
+    .search-bar button {
+      padding: 10px;
+      background-color: #0D74FF;
+      color: white;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
-      padding: 10px;
-      background-color: #1c1f26;
-      border: 1px solid #444;
-      margin: 5px 0;
-      width: 90%;
+    }
+    .script-container {
+      margin: 20px auto;
+      width: 80%;
       text-align: center;
-      color: #58a6ff;
-      border-radius: 5px;
     }
-
-    .expandable-content {
-      display: none;
-      background-color: #121417;
-      padding: 10px;
-      color: #fff;
-      font-size: 0.9rem;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
-    }
-
-    .expandable-content pre {
-      background-color: #0a0d12;
-      color: #fff;
-      padding: 15px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
-    }
-
     .script-box {
-      background-color: #121417;
-      color: #fff;
-      font-size: 0.9rem;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
-      width: 90%;
-      margin: 10px 0;
-      padding: 20px;
-    }
-
-    .script-box pre {
-      background-color: #0a0d12;
-      color: #fff;
+      background-color: #222222;
       padding: 15px;
-      font-size: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
-    }
-
-    @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .search-bar input {
-        width: 90%;
-      }
-
-      .expandable-content pre {
-        font-size: 0.8rem;
-      }
-
-      .expandable {
-        width: 90%;
-        padding: 10px;
-      }
-    }
-
-    .iphone-font {
-      font-family: 'Helvetica', sans-serif;
-      font-size: 1.1rem;
-      color: #f0f0f0;
-      font-weight: bold;
-      text-align: center;
+      border-radius: 10px;
       margin-bottom: 15px;
+      width: 100%;
     }
-
+    .script-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .script-code {
+      background-color: #000;
+      color: #0D74FF;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+    }
+    .comment-section {
+      margin-top: 20px;
+    }
+    .comment-box {
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #333;
+      width: 80%;
+      border-radius: 5px;
+      font-size: 16px;
+      color: white;
+    }
+    .btn-login {
+      margin-top: 20px;
+      background-color: #0D74FF;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .btn-login:hover {
+      background-color: #0859c0;
+    }
   </style>
-  <script>
-    function toggleContent(id) {
-      var content = document.getElementById(id);
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    }
-
-    function searchScripts() {
-      const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-      const scripts = document.querySelectorAll('.expandable-content');
-      
-      scripts.forEach(script => {
-        const content = script.innerText.toLowerCase();
-        if (content.includes(searchQuery)) {
-          script.style.display = 'block';
-        } else {
-          script.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </head>
 <body>
 
-  <header>
-    <h1>موقع سكربتات روبلوكس</h1>
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="ابحث عن سكربتات..." oninput="searchScripts()" />
-    </div>
-  </header>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Scripts</a>
+    <a href="#">About</a>
+  </div>
 
-  <div class="scripts-container">
-    <!-- Emergency Hamburger Script -->
-    <div class="expandable" onclick="toggleContent('emergencyHamburgerContent')">
-      Emergency Hamburger
-    </div>
-    <div id="emergencyHamburgerContent" class="expandable-content">
-      <div class="iphone-font">باتمان | Batman 🦇</div>
-      <div class="script-box">
-        <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()</pre>
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search for scripts...">
+    <button onclick="searchScript()">Search</button>
+  </div>
+
+  <!-- Script Boxes -->
+  <div class="script-container">
+    <div class="script-box">
+      <div class="script-title">باتمان | Batman 🦇</div>
+      <div class="script-code">
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
+      </div>
+      <div class="comment-section">
+        <div class="comment-box">Comment 1: Amazing script!</div>
+        <div class="comment-box">Comment 2: Works great!</div>
       </div>
     </div>
-
-    <!-- Other Scripts Section -->
-    <div class="expandable" onclick="toggleContent('otherScriptsContent')">
-      Other Scripts
-    </div>
-    <div id="otherScriptsContent" class="expandable-content">
-      <div class="iphone-font">الشبح | Ghost 👻</div>
-      <div class="script-box">
-        <pre>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</pre>
+    <div class="script-box">
+      <div class="script-title">الشبح | Ghost 👻</div>
+      <div class="script-code">
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
       </div>
-
-      <div class="iphone-font">طيران | fly 🕊️</div>
-      <div class="script-box">
-        <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()</pre>
+      <div class="comment-section">
+        <div class="comment-box">Comment 1: Very cool!</div>
+        <div class="comment-box">Comment 2: I love it!</div>
+      </div>
+    </div>
+    <div class="script-box">
+      <div class="script-title">طيران | Fly 🕊️</div>
+      <div class="script-code">
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+      </div>
+      <div class="comment-section">
+        <div class="comment-box">Comment 1: Nice feature!</div>
+        <div class="comment-box">Comment 2: Flies perfectly!</div>
       </div>
     </div>
   </div>
 
-  <footer>
-    <p>© 2025 جميع الحقوق محفوظة.</p>
-  </footer>
+  <!-- Login Button -->
+  <div class="btn-login" onclick="login()">Login with Google</div>
+
+  <script>
+    function searchScript() {
+      let searchTerm = document.getElementById('search').value.toLowerCase();
+      let scriptBoxes = document.querySelectorAll('.script-box');
+
+      scriptBoxes.forEach(box => {
+        let title = box.querySelector('.script-title').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+          box.style.display = 'block';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+    }
+
+    function login() {
+      alert('Login functionality will be implemented.');
+    }
+  </script>
 
 </body>
 </html>
