@@ -1,134 +1,113 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول | GitHub</title>
+    <title>My Scripts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f6f8fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #111;
+            color: white;
             margin: 0;
+            padding: 0;
         }
-
-        .login-container {
-            background-color: white;
-            border: 1px solid #e1e4e8;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            width: 400px;
-            padding: 40px;
-            border-radius: 6px;
+        header {
+            background-color: #333;
+            padding: 10px;
             text-align: center;
         }
-
-        h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: 600;
-            color: #333;
+        .container {
+            margin: 20px;
         }
-
-        .form-field {
-            width: 100%;
-            padding: 12px;
+        .script-box {
+            background-color: #222;
+            padding: 10px;
             margin: 10px 0;
-            border: 1px solid #d1d5da;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: #f6f8fa;
+            border-radius: 5px;
         }
-
-        .form-field:focus {
-            outline: none;
-            border-color: #0366d6;
-            background-color: white;
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
         }
-
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: #2c974b;
-            color: white;
-            font-size: 16px;
+        h2 {
+            font-size: 20px;
+        }
+        button {
+            padding: 10px;
+            background-color: #444;
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .submit-btn:hover {
-            background-color: #236a36;
-        }
-
-        .google-login-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: #4285f4;
             color: white;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
             cursor: pointer;
+            width: 100%;
             margin-top: 10px;
         }
-
-        .google-login-btn:hover {
-            background-color: #357ae8;
+        button:hover {
+            background-color: #666;
         }
-
-        .forgot-password {
-            font-size: 14px;
-            color: #0366d6;
-            text-decoration: none;
-            margin-top: 10px;
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
         }
-
-        .forgot-password:hover {
-            text-decoration: underline;
-        }
-
-        .create-account {
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .create-account a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-
-        .create-account a:hover {
-            text-decoration: underline;
+        input[type="text"] {
+            padding: 10px;
+            width: 50%;
+            font-size: 16px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <h1>My Roblox Scripts</h1>
+    </header>
 
-    <div class="login-container">
-        <h2>تسجيل الدخول إلى GitHub</h2>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search for scripts..." onkeyup="searchScripts()">
+    </div>
 
-        <!-- نموذج تسجيل الدخول باستخدام البريد الإلكتروني وكلمة المرور -->
-        <input type="email" class="form-field" placeholder="البريد الإلكتروني" required>
-        <input type="password" class="form-field" placeholder="كلمة المرور" required>
-
-        <!-- زر لتسجيل الدخول باستخدام البريد الإلكتروني -->
-        <button class="submit-btn">تسجيل الدخول</button>
-
-        <!-- زر تسجيل الدخول باستخدام Google -->
-        <button class="google-login-btn">تسجيل الدخول باستخدام Google</button>
-
-        <!-- رابط "نسيت كلمة المرور؟" -->
-        <a href="#" class="forgot-password">هل نسيت كلمة المرور؟</a>
-
-        <!-- رابط "إنشاء حساب جديد" -->
-        <div class="create-account">
-            <p>لا تمتلك حسابًا؟ <a href="#">إنشاء حساب</a></p>
+    <div class="container" id="scripts-container">
+        <h2>Emergency Hambuurg</h2>
+        <div class="script-box">
+            <p>Batman 🦇</p>
+            <button onclick="runScript('https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe')">Run Script</button>
+        </div>
+        
+        <h2>Other Scripts</h2>
+        <div class="script-box">
+            <p>Ghost 👻</p>
+            <button onclick="runScript('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub')">Run Script</button>
+        </div>
+        <div class="script-box">
+            <p>Fly 🕊️</p>
+            <button onclick="runScript('https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt')">Run Script</button>
         </div>
     </div>
 
+    <script>
+        function runScript(url) {
+            var script = document.createElement('script');
+            script.src = url;
+            document.body.appendChild(script);
+        }
+
+        function searchScripts() {
+            let searchQuery = document.getElementById("search").value.toLowerCase();
+            let scripts = document.querySelectorAll('.container .script-box');
+            scripts.forEach(script => {
+                let title = script.querySelector('p').textContent.toLowerCase();
+                if (title.includes(searchQuery)) {
+                    script.style.display = "block";
+                } else {
+                    script.style.display = "none";
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
