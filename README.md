@@ -109,36 +109,33 @@
     <button onclick="searchScript()">Search</button>
   </div>
 
-  <!-- Script Boxes -->
+  <!-- Emergency Hambuurg Section -->
   <div class="script-container">
     <div class="script-box">
-      <div class="script-title">باتمان | Batman 🦇</div>
+      <div class="script-title">Emergency Hambuurg | إيميرجنسى هامبورغ 🍔</div>
       <div class="script-code">
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
       </div>
       <div class="comment-section">
-        <div class="comment-box">Comment 1: Amazing script!</div>
-        <div class="comment-box">Comment 2: Works great!</div>
+        <div class="comment-box">Comment 1: Great for emergencies!</div>
+        <div class="comment-box">Comment 2: Useful in game!</div>
       </div>
     </div>
+  </div>
+
+  <!-- Other Scripts Section -->
+  <div class="script-container">
     <div class="script-box">
-      <div class="script-title">الشبح | Ghost 👻</div>
+      <div class="script-title">Other Scripts | سكربتات أخرى</div>
       <div class="script-code">
+        <b>طيران | Fly 🕊️</b><br>
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()<br><br>
+        <b>الشبح | Ghost 👻</b><br>
         loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
       </div>
       <div class="comment-section">
-        <div class="comment-box">Comment 1: Very cool!</div>
-        <div class="comment-box">Comment 2: I love it!</div>
-      </div>
-    </div>
-    <div class="script-box">
-      <div class="script-title">طيران | Fly 🕊️</div>
-      <div class="script-code">
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
-      </div>
-      <div class="comment-section">
-        <div class="comment-box">Comment 1: Nice feature!</div>
-        <div class="comment-box">Comment 2: Flies perfectly!</div>
+        <div class="comment-box">Comment 1: Fly script works great!</div>
+        <div class="comment-box">Comment 2: Ghost is so cool!</div>
       </div>
     </div>
   </div>
