@@ -5,98 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موقع سكربتات روبلوكس</title>
   <style>
-    /* إعادة تصميم الألوان الخلفية والنصوص */
+    /* إعادة تصميم الألوان والخلفيات */
     body {
       font-family: Arial, sans-serif;
-      background-color: #1e1e1e;
-      color: #fff;
+      background-color: #0d1117; /* مثل خلفية GitHub */
+      color: #c9d1d9;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
+    /* رأس الصفحة */
     header {
-      background-color: #000;
-      padding: 20px;
+      width: 100%;
+      background-color: #161b22;
+      padding: 15px;
       text-align: center;
     }
 
     h1 {
-      color: #f0f0f0;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
+      margin: 0;
     }
 
-    nav {
-      background-color: #333;
-      padding: 10px;
-      text-align: center;
+    .search-bar {
+      margin-top: 10px;
     }
 
-    nav a {
+    .search-bar input {
+      padding: 8px;
+      font-size: 1rem;
+      width: 80%;
+      border: 1px solid #444;
+      background-color: #1c1f26;
       color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      margin: 0 10px;
       border-radius: 5px;
     }
 
-    nav a:hover {
-      background-color: #555;
-    }
-
-    /* تصميم المحتوى الرئيسي */
-    .container {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 20px;
+    /* تصميم السكربتات */
+    .scripts-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 20px 0;
     }
 
     .script-box {
-      background-color: #000;
-      border: 2px solid #ffcc00;
+      background-color: #161b22;
+      border: 1px solid #444;
+      width: 90%;
+      margin: 10px 0;
       padding: 20px;
-      margin-bottom: 30px;
       border-radius: 5px;
     }
 
     .script-box h2 {
-      color: #ffcc00;
-      font-size: 1.8rem;
+      color: #58a6ff;
+      font-size: 1.4rem;
       margin-bottom: 10px;
     }
 
     .script-box p {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      margin-bottom: 10px;
     }
 
-    footer {
-      background-color: #000;
-      padding: 20px;
-      text-align: center;
-      color: #f5f5f5;
-    }
-
-    footer a {
-      color: #ffcc00;
+    .script-box a {
+      color: #58a6ff;
       text-decoration: none;
+      font-size: 1rem;
     }
 
-    footer a:hover {
+    .script-box a:hover {
       text-decoration: underline;
     }
 
-    /* التصميم المتجاوب مع الجوال */
-    @media screen and (max-width: 768px) {
+    /* Footer */
+    footer {
+      background-color: #161b22;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    /* التصميم المتجاوب للجوال */
+    @media screen and (max-width: 600px) {
       h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
 
-      nav a {
-        font-size: 1rem;
+      .search-bar input {
+        width: 90%;
       }
 
       .script-box h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+      }
+
+      .script-box p {
+        font-size: 0.9rem;
       }
     }
 
@@ -107,26 +121,32 @@
   <!-- Header Section -->
   <header>
     <h1>موقع سكربتات روبلوكس</h1>
-    <p>أفضل السكربتات للألعاب في روبلوكس</p>
+    <div class="search-bar">
+      <input type="text" placeholder="ابحث عن سكربتات..." />
+    </div>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">سكربتات أخرى</a>
-    <a href="#">دروس تعليمية</a>
-    <a href="#">تواصل معنا</a>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="container">
-    <!-- Script Box for "Emergency Hamburger" -->
+  <!-- Scripts Container -->
+  <div class="scripts-container">
+    <!-- Script Box for Emergency Hamburger -->
     <div class="script-box">
       <h2>Script Emergency Hamburger</h2>
-      <p>هنا يمكنك إضافة السكربت الخاص بـ "Emergency Hamburger" أو أي تعليمات لسكربت آخر.</p>
+      <p>إضافة خاصية الهامبرغر الطوارئ إلى لعبة روبلوكس.</p>
+      <a href="#">عرض السكربت</a>
     </div>
 
-    <!-- يمكن إضافة المزيد من السكربتات هنا إذا أردت -->
+    <!-- يمكن إضافة المزيد من السكربتات هنا -->
+    <div class="script-box">
+      <h2>Script Another Game</h2>
+      <p>هذا سكربت لإضافة ميزة جديدة في اللعبة.</p>
+      <a href="#">عرض السكربت</a>
+    </div>
+
+    <div class="script-box">
+      <h2>Script Custom HUD</h2>
+      <p>سكربت لتخصيص واجهة المستخدم في اللعبة.</p>
+      <a href="#">عرض السكربت</a>
+    </div>
   </div>
 
   <!-- Footer Section -->
