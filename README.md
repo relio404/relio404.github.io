@@ -125,6 +125,16 @@
       }
     }
 
+    /* خط الآيفون الجميل */
+    .iphone-font {
+      font-family: 'Helvetica', sans-serif;
+      font-size: 1.1rem;
+      color: #f0f0f0;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
   </style>
   <script>
     // وظيفة لفتح وغلق المحتوى
@@ -136,6 +146,21 @@
         content.style.display = "block";
       }
     }
+
+    // وظيفة البحث
+    function searchScripts() {
+      const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+      const scripts = document.querySelectorAll('.expandable-content');
+      
+      scripts.forEach(script => {
+        const content = script.innerText.toLowerCase();
+        if (content.includes(searchQuery)) {
+          script.style.display = 'block';
+        } else {
+          script.style.display = 'none';
+        }
+      });
+    }
   </script>
 </head>
 <body>
@@ -144,7 +169,7 @@
   <header>
     <h1>موقع سكربتات روبلوكس</h1>
     <div class="search-bar">
-      <input type="text" placeholder="ابحث عن سكربتات..." />
+      <input type="text" id="searchInput" placeholder="ابحث عن سكربتات..." oninput="searchScripts()" />
     </div>
   </header>
 
@@ -155,6 +180,7 @@
       Emergency Hamburger
     </div>
     <div id="emergencyHamburgerContent" class="expandable-content">
+      <div class="iphone-font">باتمان | Batman 🦇</div>
       <div class="script-box">
         <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()</pre>
       </div>
@@ -165,6 +191,7 @@
       Other Scripts
     </div>
     <div id="otherScriptsContent" class="expandable-content">
+      <div class="iphone-font">الشبح | Ghost 👻</div>
       <div class="script-box">
         <pre>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</pre>
       </div>
