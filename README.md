@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موقع سكربتات روبلوكس</title>
   <style>
-    /* زيادة السواد في الخلفية */
+    /* الخلفية والأنماط العامة */
     body {
       font-family: Arial, sans-serif;
-      background-color: #0a0d12; /* زيادة السواد أكثر */
+      background-color: #0a0d12;
       color: #c9d1d9;
       margin: 0;
       padding: 0;
@@ -17,10 +17,9 @@
       align-items: center;
     }
 
-    /* رأس الصفحة */
     header {
       width: 100%;
-      background-color: #121417; /* خلفية أغمق قليلاً */
+      background-color: #121417;
       padding: 15px;
       text-align: center;
     }
@@ -45,7 +44,7 @@
       border-radius: 5px;
     }
 
-    /* تصميم السكربتات */
+    /* نمط السكربتات */
     .scripts-container {
       display: flex;
       flex-direction: column;
@@ -61,14 +60,14 @@
       margin: 10px 0;
       padding: 20px;
       border-radius: 5px;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3); /* إضافة تأثير إضاءة خفيف للون الأزرق */
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
     }
 
     .script-box h2 {
       color: #58a6ff;
       font-size: 1.4rem;
       margin-bottom: 10px;
-      text-shadow: 0 0 5px #58a6ff; /* تأثير ضوء خفيف على الأزرق */
+      text-shadow: 0 0 5px #58a6ff;
     }
 
     .script-box p {
@@ -86,15 +85,24 @@
       text-decoration: underline;
     }
 
-    /* Footer */
-    footer {
-      background-color: #121417;
-      padding: 20px;
-      width: 100%;
+    /* النمط الخاص للقوائم القابلة للفتح */
+    .expandable {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #1c1f26;
+      border: 1px solid #444;
+      margin: 5px 0;
+      width: 90%;
       text-align: center;
+      color: #58a6ff;
+      border-radius: 5px;
     }
 
-    footer p {
+    .expandable-content {
+      display: none;
+      background-color: #121417;
+      padding: 10px;
+      color: #fff;
       font-size: 0.9rem;
     }
 
@@ -118,6 +126,17 @@
     }
 
   </style>
+  <script>
+    // وظيفة لفتح وغلق المحتوى
+    function toggleContent(id) {
+      var content = document.getElementById(id);
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
 </head>
 <body>
 
@@ -131,25 +150,24 @@
 
   <!-- Scripts Container -->
   <div class="scripts-container">
-    <!-- Script Box for Emergency Hamburger -->
-    <div class="script-box">
-      <h2>Script Emergency Hamburger</h2>
-      <p>إضافة خاصية الهامبرغر الطوارئ إلى لعبة روبلوكس.</p>
-      <a href="#">عرض السكربت</a>
+    <!-- Emergency Hamburger Script -->
+    <div class="expandable" onclick="toggleContent('emergencyHamburgerContent')">
+      Emergency Hamburger
+    </div>
+    <div id="emergencyHamburgerContent" class="expandable-content">
+      <p style="font-size: 0.8rem; color: #fff;">Loadstring(لتنفيذ السكربت)</p>
+      <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()</pre>
     </div>
 
-    <!-- يمكن إضافة المزيد من السكربتات هنا -->
-    <div class="script-box">
-      <h2>Script Another Game</h2>
-      <p>هذا سكربت لإضافة ميزة جديدة في اللعبة.</p>
-      <a href="#">عرض السكربت</a>
+    <!-- Other Scripts Section -->
+    <div class="expandable" onclick="toggleContent('otherScriptsContent')">
+      Other Scripts
+    </div>
+    <div id="otherScriptsContent" class="expandable-content">
+      <p style="font-size: 0.8rem; color: #fff;">Loadstring(لتنفيذ السكربت)</p>
+      <pre>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</pre>
     </div>
 
-    <div class="script-box">
-      <h2>Script Custom HUD</h2>
-      <p>سكربت لتخصيص واجهة المستخدم في اللعبة.</p>
-      <a href="#">عرض السكربت</a>
-    </div>
   </div>
 
   <!-- Footer Section -->
