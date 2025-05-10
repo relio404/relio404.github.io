@@ -3,231 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roblox Scripts - مصطفى جلال</title>
+  <title>Mustafa Jalal | مصطفى جلال - Roblox Scripts</title>
   <style>
     body {
+      background-color: #181818;
+      color: white;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      font-family: 'Segoe UI', sans-serif;
     }
-
-    header {
-      background-color: #161b22;
-      padding: 1rem;
+    .navbar {
+      background-color: #181818;
+      padding: 15px;
       text-align: center;
-      font-size: 1.5rem;
-      color: #58a6ff;
-      position: relative;
     }
-
-    /* زر تغيير اللغة */
-    .language-switch {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 1rem;
-      background-color: #21262d;
-      padding: 5px 10px;
+    .navbar a {
       color: white;
-      border-radius: 5px;
-      cursor: pointer;
+      text-decoration: none;
+      font-size: 20px;
+      margin: 0 15px;
     }
-
-    .search-box {
-      text-align: center;
-      margin: 1rem;
-    }
-
-    .search-box input {
-      width: 90%;
-      max-width: 400px;
-      padding: 0.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #21262d;
-      color: white;
-    }
-
-    .container {
-      padding: 1rem;
-    }
-
-    .category {
-      background-color: #161b22;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
-
-    .category h3 {
-      color: #58a6ff;
-    }
-
-    .category button {
-      background-color: #21262d;
-      color: #58a6ff;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .category button:hover {
-      background-color: #58a6ff;
-      color: black;
-    }
-
-    /* تصميم نافذة تسجيل الدخول */
-    .login-container {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.8);
-      align-items: center;
+    .search-bar {
+      margin-top: 20px;
+      display: flex;
       justify-content: center;
     }
-
-    .login-box {
-      background-color: #21262d;
-      padding: 20px;
-      border-radius: 10px;
+    .search-bar input {
+      padding: 10px;
+      font-size: 16px;
       width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
     }
-
-    .login-box input {
-      width: 100%;
+    .search-bar button {
       padding: 10px;
+      background-color: #0D74FF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .script-container {
+      margin: 20px auto;
+      width: 80%;
+      text-align: center;
+    }
+    .script-box {
+      background-color: #222222;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .script-title {
+      font-size: 20px;
+      font-weight: bold;
       margin-bottom: 10px;
-      background-color: #161b22;
-      color: white;
-      border: 1px solid #58a6ff;
-      border-radius: 5px;
     }
-
-    .login-box button {
-      width: 100%;
+    .script-code {
+      background-color: #000;
+      color: #0D74FF;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+    }
+    .comment-section {
+      margin-top: 20px;
+    }
+    .comment-box {
+      margin: 10px auto;
       padding: 10px;
-      background-color: #58a6ff;
-      border: none;
-      color: white;
+      background-color: #333;
+      width: 80%;
       border-radius: 5px;
+      font-size: 16px;
+      color: white;
+    }
+    .btn-login {
+      margin-top: 20px;
+      background-color: #0D74FF;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      font-size: 18px;
       cursor: pointer;
     }
-
-    .login-box button:hover {
-      background-color: #0d1117;
-    }
-
-    /* زر فتح نافذة تسجيل الدخول */
-    .login-btn {
-      background-color: #58a6ff;
-      padding: 10px;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      border: none;
-    }
-
-    .login-btn:hover {
-      background-color: #0d1117;
+    .btn-login:hover {
+      background-color: #0859c0;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <span>Roblox Scripts - مصطفى جلال</span>
-    <button class="language-switch" onclick="toggleLanguage()">Change to Arabic</button>
-  </header>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Scripts</a>
+    <a href="#">About</a>
+  </div>
 
-  <!-- Search Box -->
-  <div class="search-box">
+  <!-- Search Bar -->
+  <div class="search-bar">
     <input type="text" id="search" placeholder="Search for scripts...">
+    <button onclick="searchScript()">Search</button>
   </div>
 
-  <!-- Container for Categories -->
-  <div class="container">
-    <div class="category">
-      <h3>Emergency Hamburg Script - باتمان | Batman 🦇</h3>
-      <button onclick="openScript('EmergencyHamburgScript')">Open Script</button>
+  <!-- Script Boxes -->
+  <div class="script-container">
+    <div class="script-box">
+      <div class="script-title">باتمان | Batman 🦇</div>
+      <div class="script-code">
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
+      </div>
+      <div class="comment-section">
+        <div class="comment-box">Comment 1: Amazing script!</div>
+        <div class="comment-box">Comment 2: Works great!</div>
+      </div>
     </div>
-
-    <div class="category">
-      <h3>Other Scripts - الشبح | Ghost 👻</h3>
-      <button onclick="openScript('GhostScript')">Open Script</button>
+    <div class="script-box">
+      <div class="script-title">الشبح | Ghost 👻</div>
+      <div class="script-code">
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+      </div>
+      <div class="comment-section">
+        <div class="comment-box">Comment 1: Very cool!</div>
+        <div class="comment-box">Comment 2: I love it!</div>
+      </div>
     </div>
-
-    <div class="category">
-      <h3>Fly Script - طيران | fly 🕊️</h3>
-      <button onclick="openScript('FlyScript')">Open Script</button>
-    </div>
-  </div>
-
-  <!-- Login Modal -->
-  <div class="login-container" id="loginContainer">
-    <div class="login-box">
-      <input type="email" id="email" placeholder="Enter your email">
-      <input type="password" id="password" placeholder="Enter your password">
-      <button onclick="login()">Login with Email</button>
-      <button onclick="loginWithGoogle()">Login with Google</button>
+    <div class="script-box">
+      <div class="script-title">طيران | Fly 🕊️</div>
+      <div class="script-code">
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+      </div>
+      <div class="comment-section">
+        <div class="comment-box">Comment 1: Nice feature!</div>
+        <div class="comment-box">Comment 2: Flies perfectly!</div>
+      </div>
     </div>
   </div>
 
   <!-- Login Button -->
-  <button class="login-btn" onclick="showLogin()">Login / Sign Up</button>
+  <div class="btn-login" onclick="login()">Login with Google</div>
 
   <script>
-    // Toggle between languages
-    function toggleLanguage() {
-      const header = document.querySelector('header span');
-      const languageSwitch = document.querySelector('.language-switch');
+    function searchScript() {
+      let searchTerm = document.getElementById('search').value.toLowerCase();
+      let scriptBoxes = document.querySelectorAll('.script-box');
 
-      if (languageSwitch.innerHTML === 'Change to Arabic') {
-        header.innerHTML = 'سكربتات روبلوكس - مصطفى جلال';
-        languageSwitch.innerHTML = 'تغيير إلى الإنجليزية';
-      } else {
-        header.innerHTML = 'Roblox Scripts - مصطفى جلال';
-        languageSwitch.innerHTML = 'Change to Arabic';
-      }
+      scriptBoxes.forEach(box => {
+        let title = box.querySelector('.script-title').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+          box.style.display = 'block';
+        } else {
+          box.style.display = 'none';
+        }
+      });
     }
 
-    // Show Login Modal
-    function showLogin() {
-      document.getElementById('loginContainer').style.display = 'flex';
-    }
-
-    // Hide Login Modal
-    function hideLogin() {
-      document.getElementById('loginContainer').style.display = 'none';
-    }
-
-    // Simulate Login
     function login() {
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      alert(`Logged in with email: ${email}`);
-      hideLogin();
-    }
-
-    // Simulate Google Login
-    function loginWithGoogle() {
-      alert('Logged in with Google!');
-      hideLogin();
-    }
-
-    // Open Script
-    function openScript(scriptName) {
-      alert(`Opening script: ${scriptName}`);
-      // هنا يمكنك إضافة كود لفتح السكربت في نافذة منبثقة أو لتعديله
+      alert('Login functionality will be implemented.');
     }
   </script>
+
 </body>
 </html>
