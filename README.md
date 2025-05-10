@@ -112,6 +112,7 @@
   <!-- Emergency Hambuurg Section -->
   <div class="script-container">
     <div class="script-box">
+      <div class="script-title">باتمان | Batman 🦇</div>
       <div class="script-title">Emergency Hambuurg | إيميرجنسى هامبورغ 🍔</div>
       <div class="script-code">
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
