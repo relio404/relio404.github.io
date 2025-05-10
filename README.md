@@ -80,40 +80,6 @@
       color: black;
     }
 
-    /* نمط تعليقات */
-    .comment-box {
-      background-color: #21262d;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    .comment-box textarea {
-      width: 100%;
-      height: 100px;
-      background-color: #161b22;
-      color: white;
-      border: 1px solid #58a6ff;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-
-    .comment-box button {
-      background-color: #58a6ff;
-      color: white;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      cursor: pointer;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-
-    .comment-box button:hover {
-      background-color: #0d1117;
-    }
-
     /* تصميم نافذة تسجيل الدخول */
     .login-container {
       display: none;
@@ -202,13 +168,6 @@
       <h3>Fly Script - طيران | fly 🕊️</h3>
       <button onclick="openScript('FlyScript')">Open Script</button>
     </div>
-
-    <!-- Comment Box -->
-    <div class="comment-box">
-      <h3>Leave a Comment:</h3>
-      <textarea placeholder="Write your comment here..."></textarea>
-      <button>Post Comment</button>
-    </div>
   </div>
 
   <!-- Login Modal -->
@@ -267,6 +226,7 @@
     // Open Script
     function openScript(scriptName) {
       alert(`Opening script: ${scriptName}`);
+      // هنا يمكنك إضافة كود لفتح السكربت في نافذة منبثقة أو لتعديله
     }
   </script>
 </body>
