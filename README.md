@@ -140,6 +140,33 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/
     </textarea>
   </div>
 
+  <!-- خانة Brookhaven -->
+  <div class="script-box" id="brookhaven">
+    <div class="premium-text">Brookhaven</div>
+    <h2>قتل كنبه | Kill couch 🤙🏻</h2>
+    <textarea readonly>
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()
+    </textarea>
+
+    <div class="premium-text">Brookhaven</div>
+    <h2>نسخ سكنات | Copy housing 💯</h2>
+    <textarea readonly>
+loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
+    </textarea>
+
+    <div class="premium-text">Brookhaven</div>
+    <h2>قتل كنبه قوي جداً | Kill couch (Very Strong) ☠️</h2>
+    <textarea readonly>
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
+    </textarea>
+
+    <div class="premium-text">Brookhaven</div>
+    <h2>رحمه | bang 🔞</h2>
+    <textarea readonly>
+loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+    </textarea>
+  </div>
+
   <!-- التواصل مع المطور -->
   <div class="contact-dev">
     تواصل مع المطور لطلب السكربتات:<br>
@@ -148,7 +175,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/
   </div>
 
   <script>
-    // تغيير الوضع الداكن والفاتح
     let dark = true;
     function toggleTheme() {
       if (dark) {
@@ -166,7 +192,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/
       }
     }
 
-    // البحث
     function searchScripts() {
       var input = document.getElementById("searchBox");
       var filter = input.value.toUpperCase();
@@ -178,7 +203,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/
       }
     }
 
-    // منع النسخ والسكربتات
     document.addEventListener('copy', e => e.preventDefault());
     function disableKeys(e) {
       if ((e.ctrlKey && e.key === 'u') || e.key === 'PrintScreen') {
