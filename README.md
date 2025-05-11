@@ -126,12 +126,12 @@
   <!-- شريط البحث + عدد السكربتات -->
   <div style="display: flex; align-items: center;">
     <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
-    <div id="scriptCount">عدد السكربتات: <span id="countNumber">5</span></div>
+    <div id="scriptCount">عدد السكربتات: <span id="countNumber">10</span></div>
   </div>
 
   <!-- خانة MM2 -->
   <div class="script-box" id="MM2">
-    <div class="premium-text">سكربت ام ام تو قوي جداً | MM2</div>
+    <div class="premium-text">ام ام تو قوي | MM2 🔪</div>
     <h2>MM2</h2>
     <textarea readonly>
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()
@@ -140,14 +140,8 @@
 
   <!-- خانة Blox Fruit -->
   <div class="script-box" id="BloxFruit">
-    <div class="premium-text">بلوكس فروت قوي | blox fruit 🍓</div>
-    <h2>بلوكس فروت قوي | blox fruit 🍓</h2>
-    <textarea readonly>
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruitfarm.lua"))()
-    </textarea>
-
-    <div class="premium-text">القمر | The moon 🌝</div>
-    <h2>القمر | The moon 🌝</h2>
+    <div class="premium-text">القمر | The moon 🌚</div>
+    <h2>القمر | The moon 🌚</h2>
     <textarea readonly>
       loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()
     </textarea>
@@ -156,6 +150,12 @@
     <h2>ريدز | Redz 🍒</h2>
     <textarea readonly>
       loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)
+    </textarea>
+
+    <div class="premium-text">صيد فواكه | Fruit hunting 🍓</div>
+    <h2>صيد فواكه | Fruit hunting 🍓</h2>
+    <textarea readonly>
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruitfarm.lua"))()
     </textarea>
   </div>
 
