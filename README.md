@@ -45,7 +45,7 @@
     #searchBox {
       width: 100%;
       padding: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       background-color: #333;
       color: white;
       border: 2px solid #444;
@@ -53,14 +53,10 @@
       font-size: 16px;
     }
 
-    #scriptCount {
-      background-color: #444;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 16px;
-      display: inline-block;
-      margin-left: 10px;
+    #scriptCounter {
+      color: #FFD700;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .script-box {
@@ -115,7 +111,6 @@
 </head>
 <body oncontextmenu="return false" onkeydown="return disableKeys(event)">
 
-  <!-- أعلى الصفحة -->
   <div id="topBar">
     <div id="developer">مصطفى جلال | Mustafa Jalal</div>
     <div id="settingsMenu">
@@ -123,84 +118,89 @@
     </div>
   </div>
 
-  <!-- شريط البحث + عدد السكربتات -->
-  <div style="display: flex; align-items: center;">
-    <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
-    <div id="scriptCount">عدد السكربتات: <span id="countNumber">15</span></div>
-  </div>
+  <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
+  <div id="scriptCounter"></div>
 
-  <!-- خانة Emergency Hamburg -->
-  <div class="script-box" id="EmergencyHamburg">
-    <div class="premium-text">طوارئ هامبورغ | Emergency Hamburg 🍔</div>
-    <h2>طوارئ هامبورغ | Emergency Hamburg 🍔</h2>
+  <!-- Emergency hambuurg -->
+  <div class="script-box">
+    <div class="premium-text">Emergency hambuurg</div>
+    <h2>باتمان | Batman 🦇</h2>
     <textarea readonly>
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/Setuckytv/Roblox-Scripts/main/emergencyHamburg'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
     </textarea>
   </div>
 
-  <!-- خانة Brookhaven -->
-  <div class="script-box" id="Brookhaven">
-    <div class="premium-text">قتل كنبه | Kill couch 🤙🏻</div>
+  <!-- Ghost -->
+  <div class="script-box">
+    <div class="premium-text">جميع المابات</div>
+    <h2>الشبح | Ghost 👻</h2>
+    <textarea readonly>
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+    </textarea>
+  </div>
+
+  <!-- Fly -->
+  <div class="script-box">
+    <div class="premium-text">جميع المابات</div>
+    <h2>طيران | Fly 🕊️</h2>
+    <textarea readonly>
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    </textarea>
+  </div>
+
+  <!-- Brookhaven -->
+  <div class="script-box">
+    <div class="premium-text">Brookhaven</div>
     <h2>قتل كنبه | Kill couch 🤙🏻</h2>
     <textarea readonly>
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()
     </textarea>
-
-    <div class="premium-text">نسخ سكنات | Copy housing 💯</div>
     <h2>نسخ سكنات | Copy housing 💯</h2>
     <textarea readonly>
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
     </textarea>
-
-    <div class="premium-text">رحمه | bang 🔞</div>
+    <h2>قتل كنبه قوي جداً | Kill couch ☠️</h2>
+    <textarea readonly>
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
+    </textarea>
     <h2>رحمه | bang 🔞</h2>
     <textarea readonly>
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
-    </textarea>
-
-    <div class="premium-text">قوي جداً | Kill couch ☠️</div>
-    <h2>قوي جداً | Kill couch ☠️</h2>
-    <textarea readonly>
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
     </textarea>
   </div>
 
-  <!-- خانة MM2 -->
-  <div class="script-box" id="MM2">
-    <div class="premium-text">ام ام تو قوي | MM2 🔪</div>
-    <h2>MM2</h2>
+  <!-- MM2 -->
+  <div class="script-box">
+    <div class="premium-text">MM2</div>
+    <h2>ام ام تو قوي | MM2 🔪</h2>
     <textarea readonly>
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()
     </textarea>
   </div>
 
-  <!-- خانة Blox Fruit -->
-  <div class="script-box" id="BloxFruit">
-    <div class="premium-text">القمر | The moon 🌚</div>
-    <h2>القمر | The moon 🌚</h2>
-    <textarea readonly>
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()
-    </textarea>
-
-    <div class="premium-text">ريدز | Redz 🍒</div>
-    <h2>ريدز | Redz 🍒</h2>
-    <textarea readonly>
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)
-    </textarea>
-
-    <div class="premium-text">صيد فواكه | Fruit hunting 🍓</div>
+  <!-- Blox Fruit -->
+  <div class="script-box">
+    <div class="premium-text">Blox Fruit</div>
     <h2>صيد فواكه | Fruit hunting 🍓</h2>
     <textarea readonly>
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruitfarm.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruitfarm.lua"))()
+    </textarea>
+    <h2>القمر | The moon 🌚</h2>
+    <textarea readonly>
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()
+    </textarea>
+    <h2>ريدز | Redz 🍒</h2>
+    <textarea readonly>
+loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)
     </textarea>
   </div>
 
-  <!-- خانة Pet Simulator -->
-  <div class="script-box" id="PetSimulator">
-    <div class="premium-text">بت سمليتر | Pet Simulator 🐕</div>
+  <!-- Pet Simulator -->
+  <div class="script-box">
+    <div class="premium-text">Pet Simulator</div>
     <h2>بت سمليتر | Pet Simulator 🐕</h2>
     <textarea readonly>
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/mzkv/ps99/refs/heads/main/zapHub"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mzkv/ps99/refs/heads/main/zapHub"))()
     </textarea>
   </div>
 
@@ -212,25 +212,16 @@
   </div>
 
   <script>
-    // تغيير الوضع الداكن والفاتح
     let dark = true;
     function toggleTheme() {
-      if (dark) {
-        document.body.style.backgroundColor = "#f0f0f0";
-        document.body.style.color = "#000";
-        document.querySelectorAll('.script-box').forEach(box => box.style.backgroundColor = '#fff');
-        document.querySelectorAll('textarea').forEach(t => t.style.backgroundColor = '#ddd');
-        dark = false;
-      } else {
-        document.body.style.backgroundColor = "#181818";
-        document.body.style.color = "#fff";
-        document.querySelectorAll('.script-box').forEach(box => box.style.backgroundColor = '#222');
-        document.querySelectorAll('textarea').forEach(t => t.style.backgroundColor = '#333');
-        dark = true;
-      }
+      const isDark = dark;
+      document.body.style.backgroundColor = isDark ? "#f0f0f0" : "#181818";
+      document.body.style.color = isDark ? "#000" : "#fff";
+      document.querySelectorAll('.script-box').forEach(b => b.style.backgroundColor = isDark ? '#fff' : '#222');
+      document.querySelectorAll('textarea').forEach(t => t.style.backgroundColor = isDark ? '#ddd' : '#333');
+      dark = !dark;
     }
 
-    // البحث
     function searchScripts() {
       var input = document.getElementById("searchBox");
       var filter = input.value.toUpperCase();
@@ -239,24 +230,24 @@
 
       for (var i = 0; i < boxes.length; i++) {
         var text = boxes[i].innerText || boxes[i].textContent;
-        if (text.toUpperCase().indexOf(filter) !== -1) {
-          boxes[i].classList.remove("hidden");
-          count++;
-        } else {
-          boxes[i].classList.add("hidden");
-        }
+        var match = text.toUpperCase().indexOf(filter) > -1;
+        boxes[i].classList.toggle("hidden", !match);
+        if (match) count++;
       }
 
-      // تحديث عدد السكربتات
-      document.getElementById("countNumber").textContent = count;
+      document.getElementById("scriptCounter").textContent = `عدد السكربتات الظاهرة: ${count}`;
     }
 
-    // منع النسخ والسكربتات
     document.addEventListener('copy', e => e.preventDefault());
     function disableKeys(e) {
       if ((e.ctrlKey && e.key === 'u') || e.key === 'PrintScreen') {
         return false;
       }
+    }
+
+    window.onload = function () {
+      document.getElementById("scriptCounter").textContent = 
+        `عدد السكربتات الظاهرة: ${document.getElementsByClassName("script-box").length}`;
     }
   </script>
 
