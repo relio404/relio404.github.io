@@ -53,6 +53,16 @@
       font-size: 16px;
     }
 
+    #scriptCount {
+      background-color: #444;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
     .script-box {
       border: 2px solid #333;
       border-radius: 8px;
@@ -113,57 +123,48 @@
     </div>
   </div>
 
-  <!-- شريط البحث -->
-  <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
+  <!-- شريط البحث + عدد السكربتات -->
+  <div style="display: flex; align-items: center;">
+    <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
+    <div id="scriptCount">عدد السكربتات: <span id="countNumber">5</span></div>
+  </div>
 
-  <!-- خانة Emergency hambuurg -->
-  <div class="script-box" id="emergency-hambuurg">
-    <div class="premium-text">Emergency hambuurg</div>
-    <h2>باتمان | batman 🦇</h2>
+  <!-- خانة MM2 -->
+  <div class="script-box" id="MM2">
+    <div class="premium-text">سكربت ام ام تو قوي جداً | MM2</div>
+    <h2>MM2</h2>
     <textarea readonly>
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()
     </textarea>
   </div>
 
-  <!-- خانة Other Scripts -->
-  <div class="script-box" id="other-scripts">
-    <div class="premium-text">جميع المابات</div>
-    <h2>الشبح | Ghost 👻</h2>
+  <!-- خانة Blox Fruit -->
+  <div class="script-box" id="BloxFruit">
+    <div class="premium-text">بلوكس فروت قوي | blox fruit 🍓</div>
+    <h2>بلوكس فروت قوي | blox fruit 🍓</h2>
     <textarea readonly>
-loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruitfarm.lua"))()
     </textarea>
 
-    <div class="premium-text">جميع المابات</div>
-    <h2>طيران | fly 🕊️</h2>
+    <div class="premium-text">القمر | The moon 🌝</div>
+    <h2>القمر | The moon 🌝</h2>
     <textarea readonly>
-loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()
+    </textarea>
+
+    <div class="premium-text">ريدز | Redz 🍒</div>
+    <h2>ريدز | Redz 🍒</h2>
+    <textarea readonly>
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)
     </textarea>
   </div>
 
-  <!-- خانة Brookhaven -->
-  <div class="script-box" id="brookhaven">
-    <div class="premium-text">Brookhaven</div>
-    <h2>قتل كنبه | Kill couch 🤙🏻</h2>
+  <!-- خانة Pet Simulator -->
+  <div class="script-box" id="PetSimulator">
+    <div class="premium-text">بت سمليتر | Pet Simulator 🐕</div>
+    <h2>بت سمليتر | Pet Simulator 🐕</h2>
     <textarea readonly>
-loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()
-    </textarea>
-
-    <div class="premium-text">Brookhaven</div>
-    <h2>نسخ سكنات | Copy housing 💯</h2>
-    <textarea readonly>
-loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
-    </textarea>
-
-    <div class="premium-text">Brookhaven</div>
-    <h2>قتل كنبه قوي جداً | Kill couch (Very Strong) ☠️</h2>
-    <textarea readonly>
-loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
-    </textarea>
-
-    <div class="premium-text">Brookhaven</div>
-    <h2>رحمه | bang 🔞</h2>
-    <textarea readonly>
-loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/mzkv/ps99/refs/heads/main/zapHub"))()
     </textarea>
   </div>
 
@@ -175,6 +176,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/M
   </div>
 
   <script>
+    // تغيير الوضع الداكن والفاتح
     let dark = true;
     function toggleTheme() {
       if (dark) {
@@ -192,17 +194,28 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/M
       }
     }
 
+    // البحث
     function searchScripts() {
       var input = document.getElementById("searchBox");
       var filter = input.value.toUpperCase();
       var boxes = document.getElementsByClassName("script-box");
+      var count = 0;
 
       for (var i = 0; i < boxes.length; i++) {
         var text = boxes[i].innerText || boxes[i].textContent;
-        boxes[i].classList.toggle("hidden", text.toUpperCase().indexOf(filter) === -1);
+        if (text.toUpperCase().indexOf(filter) !== -1) {
+          boxes[i].classList.remove("hidden");
+          count++;
+        } else {
+          boxes[i].classList.add("hidden");
+        }
       }
+
+      // تحديث عدد السكربتات
+      document.getElementById("countNumber").textContent = count;
     }
 
+    // منع النسخ والسكربتات
     document.addEventListener('copy', e => e.preventDefault());
     function disableKeys(e) {
       if ((e.ctrlKey && e.key === 'u') || e.key === 'PrintScreen') {
