@@ -126,7 +126,43 @@
   <!-- شريط البحث + عدد السكربتات -->
   <div style="display: flex; align-items: center;">
     <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
-    <div id="scriptCount">عدد السكربتات: <span id="countNumber">10</span></div>
+    <div id="scriptCount">عدد السكربتات: <span id="countNumber">15</span></div>
+  </div>
+
+  <!-- خانة Emergency Hamburg -->
+  <div class="script-box" id="EmergencyHamburg">
+    <div class="premium-text">طوارئ هامبورغ | Emergency Hamburg 🍔</div>
+    <h2>طوارئ هامبورغ | Emergency Hamburg 🍔</h2>
+    <textarea readonly>
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Setuckytv/Roblox-Scripts/main/emergencyHamburg'))()
+    </textarea>
+  </div>
+
+  <!-- خانة Brookhaven -->
+  <div class="script-box" id="Brookhaven">
+    <div class="premium-text">قتل كنبه | Kill couch 🤙🏻</div>
+    <h2>قتل كنبه | Kill couch 🤙🏻</h2>
+    <textarea readonly>
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()
+    </textarea>
+
+    <div class="premium-text">نسخ سكنات | Copy housing 💯</div>
+    <h2>نسخ سكنات | Copy housing 💯</h2>
+    <textarea readonly>
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
+    </textarea>
+
+    <div class="premium-text">رحمه | bang 🔞</div>
+    <h2>رحمه | bang 🔞</h2>
+    <textarea readonly>
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+    </textarea>
+
+    <div class="premium-text">قوي جداً | Kill couch ☠️</div>
+    <h2>قوي جداً | Kill couch ☠️</h2>
+    <textarea readonly>
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
+    </textarea>
   </div>
 
   <!-- خانة MM2 -->
