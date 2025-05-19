@@ -14,25 +14,21 @@
       padding: 20px;
       transition: background-color 0.3s, color 0.3s;
     }
-
     #topBar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
     }
-
     #developer {
       font-family: 'Roboto Slab', serif;
       font-size: 20px;
       color: #FFD700;
     }
-
     #settingsMenu {
       display: flex;
       gap: 10px;
     }
-
     .btn-setting {
       padding: 6px 10px;
       background-color: #444;
@@ -41,14 +37,12 @@
       border-radius: 6px;
       cursor: pointer;
     }
-
     #searchContainer {
       display: flex;
       align-items: center;
       gap: 10px;
       margin-bottom: 20px;
     }
-
     #searchBox {
       flex: 1;
       padding: 10px;
@@ -58,7 +52,6 @@
       border-radius: 8px;
       font-size: 16px;
     }
-
     #scriptCount {
       background-color: #444;
       color: white;
@@ -67,7 +60,6 @@
       font-size: 14px;
       white-space: nowrap;
     }
-
     .script-box {
       border: 2px solid #333;
       border-radius: 8px;
@@ -75,12 +67,10 @@
       margin-bottom: 20px;
       background-color: #222;
     }
-
     h2 {
       font-size: 18px;
       margin-bottom: 10px;
     }
-
     textarea {
       width: 100%;
       height: 150px;
@@ -91,11 +81,9 @@
       resize: none;
       font-family: monospace;
     }
-
     .hidden {
       display: none;
     }
-
     .premium-text {
       font-family: 'Roboto Slab', serif;
       font-size: 24px;
@@ -104,23 +92,30 @@
       text-align: center;
       margin-bottom: 15px;
     }
-
     .contact-dev {
       text-align: center;
       margin-top: 30px;
       font-family: 'Roboto Slab', serif;
       font-size: 18px;
     }
-
     .contact-dev span {
       color: #FFD700;
       font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body oncontextmenu="return false" onkeydown="return disableKeys(event)">
 
-  <!-- أعلى الصفحة -->
   <div id="topBar">
     <div id="developer">مصطفى جلال | Mustafa Jalal</div>
     <div id="settingsMenu">
@@ -128,12 +123,12 @@
     </div>
   </div>
 
-  <!-- شريط البحث وعدد السكربتات -->
   <div id="searchContainer">
     <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
     <div id="scriptCount">السكربتات: 0</div>
   </div>
 
+  <!-- سكربتاتك نفسها من غير تغيير -->
   <!-- Emergency hambuurg -->
   <div class="script-box">
     <div class="premium-text">Emergency hambuurg</div>
@@ -195,12 +190,16 @@
     <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/mzkv/ps99/refs/heads/main/zapHub"))()</textarea>
   </div>
 
-  <!-- التواصل مع المطور -->
   <div class="contact-dev">
     تواصل مع المطور لطلب السكربتات:<br>
     <span>Tiktok: The_Smiths505</span><br>
     <span>Email: relio201277@gmail.com</span>
   </div>
+
+  <footer>
+    <a href="privacy.html">سياسة الخصوصية</a> |
+    <a href="contact.html">اتصل بنا</a>
+  </footer>
 
   <script>
     let dark = true;
@@ -248,6 +247,14 @@
       }
     }
   </script>
-
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>اتصل بنا</title>
+</head>
+<body style="background-color:#181818; color:white; font-family:Arial; padding:20px;">
+  <h1>اتصل بنا</h1>
+  
 </body>
 </html>
