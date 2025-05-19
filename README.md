@@ -2,9 +2,9 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>سكربتات Roblox</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet" />
   <style>
     body {
       background-color: #181818;
@@ -59,6 +59,8 @@
       border-radius: 8px;
       font-size: 14px;
       white-space: nowrap;
+      min-width: 90px;
+      text-align: center;
     }
     .script-box {
       border: 2px solid #333;
@@ -130,98 +132,40 @@
   </div>
 
   <div id="searchContainer">
-    <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
+    <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات..." />
     <div id="scriptCount">السكربتات: 0</div>
   </div>
 
-  <!-- سكربتاتك نفسها من غير تغيير -->
-  <!-- Emergency hambuurg -->
-  <div class="script-box">
-    <div class="premium-text">Emergency hambuurg</div>
-    <h2>باتمان | batman 🦇</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()</textarea>
-  </div>
+  <!-- سكربتات عامة ومشهورة -->
+  <div id="scriptsContainer">
 
-  <!-- Ghost and Fly -->
-  <div class="script-box">
-    <div class="premium-text">جميع المابات</div>
-    <h2>الشبح | Ghost 👻</h2>
-    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</textarea>
-
-    <div class="premium-text">جميع المابات</div>
-    <h2>طيران | fly 🕊️</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()</textarea>
-  </div>
-
-  <!-- Brookhaven -->
-  <div class="script-box">
-    <div class="premium-text">Brookhaven</div>
-    <h2>قتل كنبه | Kill couch 🤙🏻</h2>
-    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()</textarea>
-
-    <h2>نسخ سكنات | Copy housing 💯</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()</textarea>
-
-    <h2>قتل كنبه قوي جداً | Kill couch ☠️</h2>
-    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()</textarea>
-
-    <h2>رحمه | bang 🔞</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()</textarea>
-  </div>
-
-  <!-- MM2 -->
-  <div class="script-box">
-    <div class="premium-text">MM2</div>
-    <h2>ام ام تو قوي | MM2 🔪</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()</textarea>
-  </div>
-
-  <!-- Blox Fruit -->
-  <div class="script-box">
-    <div class="premium-text">Blox Fruit</div>
-    <h2>القمر | The moon 🌚</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()</textarea>
-
-    <h2>ريدز | Redz 🍒</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)</textarea>
-
-    <h2>صيد فواكه | Fruit hunting 🍓</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruitfarm.lua"))()</textarea>
-  </div>
-
-  <!-- Pet Simulator -->
-  <div class="script-box">
-    <div class="premium-text">Pet Simulator</div>
-    <h2>بت سمليتر | Pet Simulator 🐕</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/mzkv/ps99/refs/heads/main/zapHub"))()</textarea>
-  </div>
-
-  <!-- سكربتات عامة -->
-  <div class="script-box">
-    <div class="premium-text">سكربتات عامة</div>
-
-    <h2>تغيير سرعة المشي | Speed Hack</h2>
-    <textarea readonly>
+    <div class="script-box" data-name="Speed Hack تغيير سرعة المشي">
+      <h2>تغيير سرعة المشي | Speed Hack</h2>
+      <textarea readonly>
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 
 humanoid.WalkSpeed = 50 -- غيّر الرقم للسرعة اللي تبيها (الافتراضي 16)
-    </textarea>
-    <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+      </textarea>
+      <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+    </div>
 
-    <h2>تغيير قوة القفز | Jump Power</h2>
-    <textarea readonly>
+    <div class="script-box" data-name="Jump Power تغيير قوة القفز">
+      <h2>تغيير قوة القفز | Jump Power</h2>
+      <textarea readonly>
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 
 humanoid.JumpPower = 100 -- الافتراضي 50
-    </textarea>
-    <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+      </textarea>
+      <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+    </div>
 
-    <h2>طيران بسيط | Fly</h2>
-    <textarea readonly>
+    <div class="script-box" data-name="Fly طيران بسيط">
+      <h2>طيران بسيط | Fly</h2>
+      <textarea readonly>
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local hrp = character:WaitForChild("HumanoidRootPart")
@@ -244,9 +188,131 @@ local function fly()
 end
 
 spawn(fly)
-    </textarea>
-    <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+      </textarea>
+      <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+    </div>
 
-    <h2>وقف الضرر | God Mode</h2>
-    <textarea readonly>
-local player = game.Players.Local
+    <div class="script-box" data-name="God Mode وقف الضرر">
+      <h2>وقف الضرر | God Mode</h2>
+      <textarea readonly>
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+-- تفعيل وضع عدم التعرض للضرر
+humanoid.Health = humanoid.MaxHealth
+humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+    humanoid.Health = humanoid.MaxHealth
+end)
+      </textarea>
+      <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+    </div>
+
+    <div class="script-box" data-name="Auto Jump القفز التلقائي">
+      <h2>القفز التلقائي | Auto Jump</h2>
+      <textarea readonly>
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+while true do
+    wait(0.5)
+    if humanoid:GetState() == Enum.HumanoidStateType.Running then
+        humanoid.Jump = true
+    end
+end
+      </textarea>
+      <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+    </div>
+
+    <div class="script-box" data-name="Noclip وضع عدم الاصطدام">
+      <h2>وضع عدم الاصطدام | Noclip</h2>
+      <textarea readonly>
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local function noclip()
+    for _, part in pairs(character:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = false
+        end
+    end
+end
+
+game:GetService("RunService").Stepped:Connect(noclip)
+      </textarea>
+      <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+    </div>
+
+    <div class="script-box" data-name="ESP كشف اللاعبين">
+      <h2>كشف اللاعبين | ESP</h2>
+      <textarea readonly>
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+for _, player in pairs(Players:GetPlayers()) do
+    if player ~= Players.LocalPlayer then
+        local highlight = Instance.new("Highlight")
+        highlight.Adornee = player.Character
+        highlight.Parent = workspace
+        highlight.FillColor = Color3.fromRGB(255, 0, 0)
+        highlight.OutlineColor = Color3.fromRGB(0, 0, 0)
+    end
+end
+      </textarea>
+      <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+    </div>
+
+  </div>
+
+  <footer>
+    جميع الحقوق محفوظة &copy; 2025 مصطفى جلال
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      if (document.body.style.backgroundColor === 'white') {
+        document.body.style.backgroundColor = '#181818';
+        document.body.style.color = 'white';
+      } else {
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+      }
+    }
+
+    function disableKeys(e) {
+      if (
+        e.ctrlKey && 
+        (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S' || e.key === 'p' || e.key === 'P')
+      ) {
+        return false;
+      }
+      if (e.key === 'PrintScreen') {
+        return false;
+      }
+      return true;
+    }
+
+    function searchScripts() {
+      const input = document.getElementById('searchBox').value.toLowerCase();
+      const scripts = document.querySelectorAll('.script-box');
+      let count = 0;
+      scripts.forEach(script => {
+        const name = script.getAttribute('data-name').toLowerCase();
+        if (name.includes(input)) {
+          script.style.display = 'block';
+          count++;
+        } else {
+          script.style.display = 'none';
+        }
+      });
+      document.getElementById('scriptCount').textContent = 'السكربتات: ' + count;
+    }
+
+    // تفعيل عداد السكربتات عند تحميل الصفحة
+    window.onload = () => {
+      searchScripts();
+    };
+  </script>
+</body>
+</html>
