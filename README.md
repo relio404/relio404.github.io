@@ -112,6 +112,12 @@
       margin: 0 10px;
       text-decoration: none;
     }
+    .credits {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 5px;
+      font-family: 'Roboto Slab', serif;
+    }
   </style>
 </head>
 <body oncontextmenu="return false" onkeydown="return disableKeys(event)">
@@ -190,71 +196,57 @@
     <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/mzkv/ps99/refs/heads/main/zapHub"))()</textarea>
   </div>
 
-  <div class="contact-dev">
-    تواصل مع المطور لطلب السكربتات:<br>
-    <span>Tiktok: The_Smiths505</span><br>
-    <span>Email: relio201277@gmail.com</span>
-  </div>
+  <!-- سكربتات عامة -->
+  <div class="script-box">
+    <div class="premium-text">سكربتات عامة</div>
 
-  <footer>
-    <a href="privacy.html">سياسة الخصوصية</a> |
-    <a href="contact.html">اتصل بنا</a>
-  </footer>
+    <h2>تغيير سرعة المشي | Speed Hack</h2>
+    <textarea readonly>
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
 
-  <script>
-    let dark = true;
-    function toggleTheme() {
-      if (dark) {
-        document.body.style.backgroundColor = "#f0f0f0";
-        document.body.style.color = "#000";
-        document.querySelectorAll('.script-box').forEach(box => box.style.backgroundColor = '#fff');
-        document.querySelectorAll('textarea').forEach(t => t.style.backgroundColor = '#ddd');
-        dark = false;
-      } else {
-        document.body.style.backgroundColor = "#181818";
-        document.body.style.color = "#fff";
-        document.querySelectorAll('.script-box').forEach(box => box.style.backgroundColor = '#222');
-        document.querySelectorAll('textarea').forEach(t => t.style.backgroundColor = '#333');
-        dark = true;
-      }
-    }
+humanoid.WalkSpeed = 50 -- غيّر الرقم للسرعة اللي تبيها (الافتراضي 16)
+    </textarea>
+    <div class="credits">مصطفى جلال | Mustafa Jalal</div>
 
-    function searchScripts() {
-      var input = document.getElementById("searchBox");
-      var filter = input.value.toUpperCase();
-      var boxes = document.getElementsByClassName("script-box");
+    <h2>تغيير قوة القفز | Jump Power</h2>
+    <textarea readonly>
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
 
-      for (var i = 0; i < boxes.length; i++) {
-        var text = boxes[i].innerText || boxes[i].textContent;
-        boxes[i].classList.toggle("hidden", text.toUpperCase().indexOf(filter) === -1);
-      }
+humanoid.JumpPower = 100 -- الافتراضي 50
+    </textarea>
+    <div class="credits">مصطفى جلال | Mustafa Jalal</div>
 
-      updateScriptCount();
-    }
+    <h2>طيران بسيط | Fly</h2>
+    <textarea readonly>
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local hrp = character:WaitForChild("HumanoidRootPart")
 
-    function updateScriptCount() {
-      const scripts = document.querySelectorAll("textarea");
-      const visibleScripts = Array.from(scripts).filter(t => !t.closest('.script-box').classList.contains("hidden"));
-      document.getElementById("scriptCount").textContent = "السكربتات: " + visibleScripts.length;
-    }
+local flying = true
+local speed = 50
 
-    window.onload = updateScriptCount;
+local UserInputService = game:GetService("UserInputService")
 
-    document.addEventListener('copy', e => e.preventDefault());
-    function disableKeys(e) {
-      if ((e.ctrlKey && e.key === 'u') || e.key === 'PrintScreen') {
-        return false;
-      }
-    }
-  </script>
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>اتصل بنا</title>
-</head>
-<body style="background-color:#181818; color:white; font-family:Arial; padding:20px;">
-  <h1>اتصل بنا</h1>
-  
-</body>
-</html>
+local function fly()
+    while flying do
+        wait()
+        local moveDir = Vector3.new(0,0,0)
+        if UserInputService:IsKeyDown(Enum.KeyCode.W) then moveDir = moveDir + workspace.CurrentCamera.CFrame.LookVector end
+        if UserInputService:IsKeyDown(Enum.KeyCode.S) then moveDir = moveDir - workspace.CurrentCamera.CFrame.LookVector end
+        if UserInputService:IsKeyDown(Enum.KeyCode.A) then moveDir = moveDir - workspace.CurrentCamera.CFrame.RightVector end
+        if UserInputService:IsKeyDown(Enum.KeyCode.D) then moveDir = moveDir + workspace.CurrentCamera.CFrame.RightVector end
+        hrp.Velocity = moveDir.Unit * speed
+    end
+end
+
+spawn(fly)
+    </textarea>
+    <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+
+    <h2>وقف الضرر | God Mode</h2>
+    <textarea readonly>
+local player = game.Players.Local
