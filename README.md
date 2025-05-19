@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>سكربتات Roblox</title>
+  <title>سكربتات Roblox | مصطفى جلال</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -12,6 +12,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
+      user-select: none; /* منع النسخ */
       transition: background-color 0.3s, color 0.3s;
     }
     #topBar {
@@ -68,6 +69,7 @@
       padding: 15px;
       margin-bottom: 20px;
       background-color: #222;
+      user-select: none; /* منع النسخ داخل السكربت */
     }
     h2 {
       font-size: 18px;
@@ -82,6 +84,7 @@
       padding: 10px;
       resize: none;
       font-family: monospace;
+      user-select: all; /* يمكن نسخ النص من هنا */
     }
     .hidden {
       display: none;
@@ -108,6 +111,8 @@
       text-align: center;
       margin-top: 40px;
       font-size: 14px;
+      color: #aaa;
+      font-family: 'Roboto Slab', serif;
     }
     footer a {
       color: #FFD700;
@@ -136,9 +141,10 @@
     <div id="scriptCount">السكربتات: 0</div>
   </div>
 
-  <!-- سكربتات عامة ومشهورة -->
+  <!-- سكربتات -->
   <div id="scriptsContainer">
 
+    <!-- السكربتات القديمة -->
     <div class="script-box" data-name="Speed Hack تغيير سرعة المشي">
       <h2>تغيير سرعة المشي | Speed Hack</h2>
       <textarea readonly>
@@ -263,6 +269,28 @@ end
       <div class="credits">مصطفى جلال | Mustafa Jalal</div>
     </div>
 
+    <!-- سكربت جديد: طيران سيارة -->
+    <div class="script-box" data-name="Car Fly طيران سيارة">
+      <h2>طيران سيارة | Car Fly</h2>
+      <textarea readonly>
+local car = workspace:FindFirstChild("Car") -- غير اسم السيارة حسب لعبتك
+if not car then return end
+
+local BodyVelocity = Instance.new("BodyVelocity")
+BodyVelocity.MaxForce = Vector3.new(1e5, 1e5, 1e5)
+BodyVelocity.Velocity = Vector3.new(0, 50, 0)
+BodyVelocity.Parent = car.PrimaryPart or car:FindFirstChildWhichIsA("BasePart")
+
+wait(5)
+BodyVelocity:Destroy()
+      </textarea>
+      <div class="credits">مصطفى جلال | Mustafa Jalal</div>
+    </div>
+
+  </div>
+
+  <div class="contact-dev">
+    <p>للتواصل مع المطور: <span>mustafajalal@example.com</span></p>
   </div>
 
   <footer>
@@ -270,6 +298,7 @@ end
   </footer>
 
   <script>
+    // تغيير الوضع فاتح / غامق
     function toggleTheme() {
       if (document.body.style.backgroundColor === 'white') {
         document.body.style.backgroundColor = '#181818';
@@ -280,6 +309,7 @@ end
       }
     }
 
+    // منع النسخ والاختصارات
     function disableKeys(e) {
       if (
         e.ctrlKey && 
@@ -293,6 +323,7 @@ end
       return true;
     }
 
+    // البحث وتصفية السكربتات
     function searchScripts() {
       const input = document.getElementById('searchBox').value.toLowerCase();
       const scripts = document.querySelectorAll('.script-box');
