@@ -247,6 +247,10 @@
       }
     }
   </script>
+<div style="text-align:center; margin-top: 40px;">
+  <a href="privacy.html" style="color: #FFD700; margin: 10px;">سياسة الخصوصية</a> |
+  <a href="contact.html" style="color: #FFD700; margin: 10px;">اتصل بنا</a>
+</div> 
 
 </body>
 </html>
