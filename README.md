@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ar">
+<!DOCTYPE html>
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,10 +23,6 @@
       font-family: 'Roboto Slab', serif;
       font-size: 20px;
       color: #FFD700;
-    }
-    #settingsMenu {
-      display: flex;
-      gap: 10px;
     }
     .btn-setting {
       padding: 6px 10px;
@@ -56,7 +53,6 @@
       padding: 6px 12px;
       border-radius: 8px;
       font-size: 14px;
-      white-space: nowrap;
     }
     .script-box {
       border: 2px solid #333;
@@ -78,6 +74,17 @@
       padding: 10px;
       resize: none;
       font-family: monospace;
+      margin-bottom: 10px;
+    }
+    .copy-btn {
+      background-color: #FFD700;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 14px;
     }
     .hidden {
       display: none;
@@ -112,101 +119,115 @@
     }
   </style>
 </head>
-<body oncontextmenu="return false" onkeydown="return disableKeys(event)">
+<body>
+
   <div id="topBar">
     <div id="developer">مصطفى جلال | Mustafa Jalal</div>
     <div id="settingsMenu">
       <button class="btn-setting" onclick="toggleTheme()">تغيير الوضع</button>
     </div>
   </div>
+
   <div id="searchContainer">
     <input type="text" id="searchBox" onkeyup="searchScripts()" placeholder="ابحث عن السكربتات...">
     <div id="scriptCount">السكربتات: 0</div>
-  </div>  <!-- سكربتات ثابتة لا تُزال -->  <div class="script-box">
+  </div>
+
+  <!-- سكربت: Emergency hamburg -->
+  <div class="script-box">
     <div class="premium-text">Emergency hambuurg</div>
-    <h2>باتمان | batman 🦇</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()</textarea>
-  </div>  <div class="script-box">
+    <h2>باتمان | batman</h2>
+    <textarea readonly id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Farx11122/Dupess/main/SecondDupe"))()</textarea>
+    <button class="copy-btn" onclick="copyText('s1')">نسخ السكربت</button>
+  </div>
+
+  <!-- سكربت: Ghost and Fly -->
+  <div class="script-box">
     <div class="premium-text">جميع المابات</div>
-    <h2>الشبح | Ghost 👻</h2>
-    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</textarea><h2>طيران | fly 🕊️</h2>
-<textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()</textarea>
+    <h2>الشبح | Ghost</h2>
+    <textarea readonly id="s2">loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</textarea>
+    <button class="copy-btn" onclick="copyText('s2')">نسخ السكربت</button>
 
-  </div>  <div class="script-box">
+    <h2>طيران | Fly</h2>
+    <textarea readonly id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()</textarea>
+    <button class="copy-btn" onclick="copyText('s3')">نسخ السكربت</button>
+  </div>
+
+  <!-- سكربت: Brookhaven -->
+  <div class="script-box">
     <div class="premium-text">Brookhaven</div>
-    <h2>قتل كنبه | Kill couch 🤙🏻</h2>
-    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()</textarea><h2>نسخ سكنات | Copy housing 💯</h2>
-<textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()</textarea>
+    <h2>قتل كنبه | Kill couch</h2>
+    <textarea readonly id="s4">loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()</textarea>
+    <button class="copy-btn" onclick="copyText('s4')">نسخ السكربت</button>
 
-<h2>قتل كنبه قوي جداً | Kill couch ☠️</h2>
-<textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()</textarea>
+    <h2>نسخ سكنات</h2>
+    <textarea readonly id="s5">loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()</textarea>
+    <button class="copy-btn" onclick="copyText('s5')">نسخ السكربت</button>
 
-<h2>رحمه | bang 🔞</h2>
-<textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()</textarea>
+    <h2>قتل كنبه قوي جداً</h2>
+    <textarea readonly id="s6">loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()</textarea>
+    <button class="copy-btn" onclick="copyText('s6')">نسخ السكربت</button>
+  </div>
 
-  </div>  <!-- سكربتات إضافية -->  <div class="script-box">
-    <div class="premium-text">سكربتات عامة</div>
-    <h2>السرعة | Speed</h2>
-    <textarea readonly>loadstring(game:HttpGet("https://pastebin.com/raw/XwU0LqzR"))()</textarea><h2>رؤية من بعيد | ESP</h2>
-<textarea readonly>loadstring(game:HttpGet("https://pastebin.com/raw/G1rhF2Yt"))()</textarea>
+  <!-- سكربت: MM2 -->
+  <div class="script-box">
+    <div class="premium-text">MM2</div>
+    <h2>ام ام تو قوي</h2>
+    <textarea readonly id="s7">loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()</textarea>
+    <button class="copy-btn" onclick="copyText('s7')">نسخ السكربت</button>
+  </div>
 
-<h2>نقل سريع | Teleport</h2>
-<textarea readonly>loadstring(game:HttpGet("https://pastebin.com/raw/M4QE3rLg"))()</textarea>
+  <!-- سكربت: Blox Fruit -->
+  <div class="script-box">
+    <div class="premium-text">Blox Fruit</div>
+    <h2>القمر | The moon</h2>
+    <textarea readonly id="s8">loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()</textarea>
+    <button class="copy-btn" onclick="copyText('s8')">نسخ السكربت</button>
+  </div>
 
-<h2>تفجير | Boom</h2>
-<textarea readonly>loadstring(game:HttpGet("https://pastebin.com/raw/k5YzW8Jp"))()</textarea>
+  <!-- سكربت: Pet Simulator -->
+  <div class="script-box">
+    <div class="premium-text">Pet Simulator</div>
+    <h2>بت سمليتر</h2>
+    <textarea readonly id="s9">loadstring(game:HttpGet("https://raw.githubusercontent.com/mzkv/ps99/refs/heads/main/zapHub"))()</textarea>
+    <button class="copy-btn" onclick="copyText('s9')">نسخ السكربت</button>
+  </div>
 
-<h2>اختفاء | Invisible</h2>
-<textarea readonly>loadstring(game:HttpGet("https://pastebin.com/raw/UpZXR7qt"))()</textarea>
-
-  </div>  <div class="contact-dev">
-    تواصل مع المطور لطلب السكربتات:<br>
+  <div class="contact-dev">
+    تواصل مع المطور:<br>
     <span>Tiktok: The_Smiths505</span><br>
     <span>Email: relio201277@gmail.com</span>
-  </div>  <footer>
+  </div>
+
+  <footer>
     <a href="privacy.html">سياسة الخصوصية</a> |
     <a href="contact.html">اتصل بنا</a>
-  </footer>  <script>
-    let dark = true;
+  </footer>
+
+  <script>
     function toggleTheme() {
-      if (dark) {
-        document.body.style.backgroundColor = "#f0f0f0";
-        document.body.style.color = "#000";
-        document.querySelectorAll('.script-box').forEach(box => box.style.backgroundColor = '#fff');
-        document.querySelectorAll('textarea').forEach(t => t.style.backgroundColor = '#ddd');
-        dark = false;
-      } else {
-        document.body.style.backgroundColor = "#181818";
-        document.body.style.color = "#fff";
-        document.querySelectorAll('.script-box').forEach(box => box.style.backgroundColor = '#222');
-        document.querySelectorAll('textarea').forEach(t => t.style.backgroundColor = '#333');
-        dark = true;
-      }
+      document.body.classList.toggle("light-mode");
+    }
+
+    function copyText(id) {
+      const textarea = document.getElementById(id);
+      navigator.clipboard.writeText(textarea.value);
     }
 
     function searchScripts() {
-      var input = document.getElementById("searchBox");
-      var filter = input.value.toUpperCase();
-      var boxes = document.getElementsByClassName("script-box");
-      for (var i = 0; i < boxes.length; i++) {
-        var text = boxes[i].innerText || boxes[i].textContent;
-        boxes[i].classList.toggle("hidden", text.toUpperCase().indexOf(filter) === -1);
+      const filter = document.getElementById("searchBox").value.toUpperCase();
+      const boxes = document.getElementsByClassName("script-box");
+      let count = 0;
+      for (let box of boxes) {
+        const text = box.innerText.toUpperCase();
+        const match = text.includes(filter);
+        box.classList.toggle("hidden", !match);
+        if (match) count++;
       }
-      updateScriptCount();
+      document.getElementById("scriptCount").textContent = "السكربتات: " + count;
     }
 
-    function updateScriptCount() {
-      const scripts = document.querySelectorAll("textarea");
-      const visibleScripts = Array.from(scripts).filter(t => !t.closest('.script-box').classList.contains("hidden"));
-      document.getElementById("scriptCount").textContent = "السكربتات: " + visibleScripts.length;
-    }
-
-    window.onload = updateScriptCount;
-
-    function disableKeys(e) {
-      if ((e.ctrlKey && e.key === 'u') || e.key === 'PrintScreen') {
-        return false;
-      }
-    }
-  </script></body>
+    window.onload = searchScripts;
+  </script>
+</body>
 </html>
