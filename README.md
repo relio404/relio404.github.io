@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ar">
+<!DOCTYPE html>
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -99,6 +100,7 @@
       border-radius: 6px;
       cursor: pointer;
       font-size: 14px;
+      margin-bottom: 15px;
     }
     .contact-dev {
       text-align: center;
@@ -135,7 +137,6 @@
     <div id="scriptCount">السكربتات: 0</div>
   </div>
 
-  <!-- سكربتاتك تبدأ من هنا -->
   <!-- Emergency hamburg -->
   <div class="script-box">
     <div class="premium-text">Emergency hamburg</div>
@@ -144,72 +145,67 @@
     <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
   </div>
 
-  <!-- باقي السكربتات... (نفس ما أرسلته أنت بدون تعديل) -->
+  <!-- Ghost and Fly -->
+  <div class="script-box">
+    <div class="premium-text">جميع المابات</div>
 
-  <div class="contact-dev">
-    تواصل مع المطور:<br>
-    <span>Tiktok: The_Smiths505</span><br>
-    <span>Email: relio201277@gmail.com</span>
+    <h2>الشبح | Ghost 👻</h2>
+    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
+
+    <h2>طيران | Fly 🕊️</h2>
+    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
+
+    <h2>زيادة فريمات 🫀FPS</h2>
+    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
+
+    <h2>سكربت اختفاء</h2>
+    <textarea readonly>loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
+
+    <h2>قفل 🔒</h2>
+    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Sector9922/SECTOR-SHIFT-LOCK/main/SECTOR%20SHIFT%20LOCK"))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
+
+    <h2>ايم بوت</h2>
+    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/ds5x/Scripts-Xhub/refs/heads/main/IMBOT-XHUB"))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
+
+    <h2>تنقل</h2>
+    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/Ndora1/Ndora1/main/Nokies'))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
+
+    <h2>طيران سيارة</h2>
+    <textarea readonly>Loadstring(game:HttpGet("https://raw.githubusercontent.com/hasan08122020108181818/HASA/759cc1030d8a4f4c23b32e8cb8550b47f567d1b9/carflyronald"))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
   </div>
 
-  <footer>
-    <a href="privacy.html">سياسة الخصوصية</a> |
-    <a href="contact.html">اتصل بنا</a>
-  </footer>
+  <!-- Brookhaven -->
+  <div class="script-box">
+    <div class="premium-text">Brookhaven</div>
 
-  <script>
-    let dark = true;
-    function toggleTheme() {
-      document.body.style.backgroundColor = dark ? "#f0f0f0" : "#181818";
-      document.body.style.color = dark ? "#000" : "#fff";
-      document.querySelectorAll('.script-box').forEach(box => box.style.backgroundColor = dark ? '#fff' : '#222');
-      document.querySelectorAll('textarea').forEach(t => t.style.backgroundColor = dark ? '#ddd' : '#333');
-      dark = !dark;
-    }
+    <h2>قتل كنبه | Kill couch 🤙🏻</h2>
+    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub'))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
 
-    function searchScripts() {
-      const input = document.getElementById("searchBox").value.toUpperCase();
-      const boxes = document.getElementsByClassName("script-box");
-      let count = 0;
+    <h2>نسخ سكنات | Copy housing 💯</h2>
+    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
 
-      for (let box of boxes) {
-        const text = box.innerText.toUpperCase();
-        const match = text.includes(input);
-        box.style.display = match ? "" : "none";
-        if (match) {
-          const textareas = box.querySelectorAll("textarea").length;
-          count += textareas;
-        }
-      }
+    <h2>قتل كنبه قوي جداً | Kill couch ☠️</h2>
+    <textarea readonly>loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
 
-      document.getElementById("scriptCount").textContent = "السكربتات: " + count;
-    }
+    <h2>نسخ سكنات 2</h2>
+    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmidd409/-/refs/heads/main/CopyAvatar.txt"))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
 
-    function updateScriptCount() {
-      const total = document.querySelectorAll(".script-box textarea").length;
-      document.getElementById("scriptCount").textContent = "السكربتات: " + total;
-    }
+    <h2>عربي انجليزي</h2>
+    <textarea readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()</textarea>
+    <button class="copy-btn" onclick="copyText(this)">نسخ السكربت</button>
+  </div>
 
-    function copyText(btn) {
-      const textarea = btn.previousElementSibling;
-      textarea.select();
-      textarea.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(textarea.value);
-      btn.textContent = "تم النسخ!";
-      setTimeout(() => btn.textContent = "نسخ السكربت", 1500);
-    }
-
-    window.onload = function() {
-      searchScripts();
-      updateScriptCount();
-    };
-
-    document.addEventListener('copy', e => e.preventDefault());
-    function disableKeys(e) {
-      if ((e.ctrlKey && e.key === 'u') || e.key === 'PrintScreen') {
-        return false;
-      }
-    }
-  </script>
-</body>
-</html>
+  <!-- Dead Rails -->
+  <div class="script
